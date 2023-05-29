@@ -368,7 +368,7 @@ fun Application.configureRouting(){
                     }
                 }
             }
-            authenticate("api-key") {
+            authenticate("apikey") {
                 get("assocState") {
                     val principal: HostPrincipal = call.principal() ?: throw AuthenticationException()
                     val assocState = hostService.assocState(principal.id) ?: throw NotFoundException()
